@@ -102,7 +102,7 @@ def main():
     plot.plot(opt_x, opt_y, label=f"Optimal Angle ({opt_angle}°)", color='red', linestyle='--')
     
     plot.axhline(0, color='black', lw=1) # Ground line
-    plot.title(f"Projectile Motion with Air Resistance (v0 = {user_v0} m/s)")
+    plot.title(f"Projectile Motion with Air Resistance & Wind (v0 = {user_v0} m/s and v-wind = {user_v_wind} m/s)")
     plot.xlabel("Distance (m)")
     plot.ylabel("Height (m)")
     plot.legend()
@@ -111,4 +111,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
