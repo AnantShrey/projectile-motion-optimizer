@@ -8,7 +8,7 @@ encounters in the atmosphere. By calculating how air density and wind
 speed impact a projectile, we can determine the specific angle required
 to achieve the greatest possible distance.
 
----
+
 
 ## **2. How the Math Works**
 
@@ -87,7 +87,7 @@ seconds) and calculates the new position for each slice using a loop:
 *(The program exits if range exceeds 100 kilometers to prevent infinite
 looping)*
 
----
+
 
 ## **3. The Optimization Logic**
 
@@ -103,9 +103,9 @@ resistance and wind:
 -   **Tailwinds** (wind blowing with the object) allow for a higher
     launch angle.
 
----
 
-## **4. Potential Upgrades** {#5-potential-upgrades}
+
+## **4. Potential Upgrades**
 
 To make this simulation even more realistic. future versions could
 include:
@@ -116,4 +116,4 @@ include:
 -   **Magnus Effect :** Calculating how the \"spin/rotation\" of a ball
     (like a football or baseball) affect lift.
 
----
+
