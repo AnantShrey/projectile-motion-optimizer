@@ -86,7 +86,7 @@ seconds) and calculates the new position for each slice using a loop:
     new velocity in both directions.
       
     $$pos_{new} = pos_{old} + v_{new} \cdot \Delta t$$
-    
+      
 6.  **Repeat :** Continue until the object hits the ground ($y < 0$).
 
 *(The program exits if range exceeds 100 kilometers to prevent infinite
