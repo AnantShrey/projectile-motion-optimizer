@@ -63,30 +63,25 @@ seconds) and calculates the new position for each slice using a loop:
     component with respect to air, considering wind (horizontal)
       
     $$v_{rel} = \sqrt{(v_x + v_{wind})^2 + v_y^2}$$
-
 2.  **Calculate Forces :** Find the current drag factor to be divided by
     $m$ and multiplied with components of relative velocity to get $a_x$
     and $a_y$ in the next step.
       
     $$F_d = \frac{1}{2}\rho v_{rel} C_d A$$
-
 3.  **Calculate Acceleration :** Finding the components of acceleration
     from the forces
       
     $$a_x = -\left(\frac{F_d}{m}\right)\cdot v_{rel\,x}$$
       
     $$a_y = -g - \left(\frac{F_d}{m}\right) \cdot v_{rel\,y}$$
-
 4.  **Update Velocity :** Adjust the components of velocity based on
     those acceleration.
       
     $$v_{new} = v_{old} + a \cdot \Delta t$$
-
 5.  **Update Position :** Move the projectile a tiny bit based on the
     new velocity in both directions.
       
     $$pos_{new} = pos_{old} + v_{new} \cdot \Delta t$$
-      
 6.  **Repeat :** Continue until the object hits the ground ($y < 0$).
 
 *(The program exits if range exceeds 100 kilometers to prevent infinite
