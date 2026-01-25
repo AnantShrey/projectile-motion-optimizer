@@ -1,4 +1,8 @@
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AnantShrey/AeroLaunch/blob/main/AeroLaunch.ipynb)
+
 # **AeroLaunch - Projectile Motion Optimizer: Beyond the Ideal Vacuum**
+
+
 
 ## **1. Project Goal**
 
@@ -117,3 +121,8 @@ include:
     (like a football or baseball) affect lift.
 
 
+
+## **5. Output**
+
+After running the python program (main.py) and inputting the initial velocity ($\text{v0}), angle of projection ($\theta$). The terminal will display the inputted angle along with its range and the optimal angle with its range. Then a graph built using matplotlib will open in a new separate window automatically. The graph will display the path of the object. It will look like this:
+![Optimization Demo](graph_output.png)
