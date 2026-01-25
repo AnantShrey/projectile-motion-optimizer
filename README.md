@@ -47,9 +47,9 @@ $$F_d = \frac{1}{2}\rho v_{rel} C_d A$$
 
 The formula for components of acceleration are:
   
-$$a_x = -\left(\frac{\rho \, v_{rel} \, C_d A}{2}\right)\cdot \frac{v_{rel\,x}}{m}$$
+$$a_x = -\left(\frac{\rho   v_{rel}   C_d A}{2}\right)\cdot \frac{v_{rel x}}{m}$$
   
-$$a_y = -g - \left(\frac{\rho \, v_{rel} \, C_d A}{2}\right) \cdot \frac{v_{rel\,y}}{m}$$
+$$a_y = -g - \left(\frac{\rho   v_{rel}   C_d A}{2}\right) \cdot \frac{v_{rel y}}{m}$$
 
 ### **2.3 Calculating Motion Step-by-Step**
 
@@ -71,9 +71,9 @@ seconds) and calculates the new position for each slice using a loop:
 3.  **Calculate Acceleration :** Finding the components of acceleration
     from the forces
       
-    $$a_x = -\left(\frac{F_d}{m}\right)\cdot v_{rel\,x}$$
+    $$a_x = -\left(\frac{F_d}{m}\right)\cdot v_{rel x}$$
       
-    $$a_y = -g - \left(\frac{F_d}{m}\right) \cdot v_{rel\,y}$$
+    $$a_y = -g - \left(\frac{F_d}{m}\right) \cdot v_{rel y}$$
 4.  **Update Velocity :** Adjust the components of velocity based on
     those acceleration.
       
