@@ -124,5 +124,5 @@ include:
 
 ## **5. Output**
 
-After running the python program (main.py) and inputting the initial velocity ($\text{v0}$), angle of projection ($\theta$). The terminal will display the inputted angle along with its range and the optimal angle with its range. Then a graph built using matplotlib will open in a new separate window automatically. The graph will display the path of the object. It will look like this:
+After running the python program (main.py) and inputting the initial velocity ($\text{v0}$), angle of projection ($\theta$) and velocity of wind (positive for headwind/negative for tailwind). The terminal will display the inputted angle along with its range and the optimal angle with its range. Then a graph built using matplotlib will open in a new separate window automatically. The graph will display the path of the object. It will look like this:
 ![Optimization Demo](graph_output.png)
