@@ -1,3 +1,5 @@
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AnantShrey/projectile-motion-optimizer/blob/main/Projectile_Motion_Optimizer.ipynb)
+
 # Projectile Motion Range Optimizer 🚀
 
 A Python-based tool designed to calculate and visualize the optimal launch angle for maximum horizontal range, considering air resistance in the equation.
