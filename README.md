@@ -1,21 +1,6 @@
----
-jupyter:
-  colab:
-  kernelspec:
-    display_name: Python 3
-    name: python3
-  language_info:
-    name: python
-  nbformat: 4
-  nbformat_minor: 0
----
-
-::: {.cell .markdown id="3ftrkHkQ2b2x"}
 # **AeroLaunch - Projectile Motion Optimizer: Beyond the Ideal Vacuum**
-:::
 
-::: {.cell .markdown id="YJEQ54Oyw3q2"}
-## **1. Project Goal** {#1-project-goal}
+## **1. Project Goal**
 
 This goal of this program is to calculate the trajectory of an object
 while accounting for the friction and environmental factors it
@@ -23,19 +8,15 @@ encounters in the atmosphere. By calculating how air density and wind
 speed impact a projectile, we can determine the specific angle required
 to achieve the greatest possible distance.
 
-------------------------------------------------------------------------
-:::
+---
 
-::: {.cell .markdown id="frzMTg0Xwy3X"}
-## **2. How the Math Works** {#2-how-the-math-works}
+## **2. How the Math Works**
 
 In a standard physics classroom, often ignore air resistance (and wind).
 However, in this optimizer, we account for two main forces that dictate
 where the projectile will land.
-:::
 
-::: {.cell .markdown id="8S5X-GAYxJKA"}
-### **2.1 Gravity (The Downward Pull)** {#21-gravity-the-downward-pull}
+### **2.1 Gravity (The Downward Pull)**
 
 Gravity acts constantly on the verical component of the projectile\'s
 motion. In this simulation, we use the standard acceleration due to
@@ -43,10 +24,8 @@ gravity:
 
 -   $g = 9.81 \ \text{m/s}^2$ : This force pulls the object toward the
     ground, creating the \"arc\" of the flight.
-:::
 
-::: {.cell .markdown id="YiD9d6xbxEsT"}
-### **2.2 Air Resistance (The Backward Push)** {#22-air-resistance-the-backward-push}
+### **2.2 Air Resistance (The Backward Push)**
 
 Air resistance, or drag, pushes against the projectile in the opposite
 direction of its motion. Unlike gravity, drag changes based on how fast
@@ -62,16 +41,15 @@ the object is moving. It is calculated using:
 
 The formula used for the Drag Factor ($F_d$) (later divided by $m$ and
 multiplied with components of relative velocity to get $a_x$ and $a_y$)
-is: $$F_d = \frac{1}{2}\rho v_{rel} C_d A$$
+is:  
+$$F_d = \frac{1}{2}\rho v_{rel} C_d A$$
 
-The formula for components of acceleration used is:
+The formula for components of acceleration are:  
 $$a_x = -\left(\frac{\rho \, v_{rel} \, C_d A}{2}\right)\cdot \frac{v_{rel\,x}}{m}$$
-
+  
 $$a_y = -g - \left(\frac{\rho \, v_{rel} \, C_d A}{2}\right) \cdot \frac{v_{rel\,y}}{m}$$
-:::
 
-::: {.cell .markdown id="UOYJ3CN8xA3g"}
-### **2.3 Calculating Motion Step-by-Step** {#23-calculating-motion-step-by-step}
+### **2.3 Calculating Motion Step-by-Step**
 
 Because the drag force depends on the velocity ($v^2$), the math changes
 at every instant. We cannot use a single simple formula to find the
@@ -81,18 +59,23 @@ seconds) and calculates the new position for each slice using a loop:
 
 1.  **Calculate Relative Velocity :** Find the relative velocity and its
     component with respect to air, considering wind (horizontal)
+      
     $$v_{rel} = \sqrt{(v_x + v_{wind})^2 + v_y^2}$$
 2.  **Calculate Forces :** Find the current drag factor to be divided by
     $m$ and multiplied with components of relative velocity to get $a_x$
-    and $a_y$ in the next step. $$F_d = \frac{1}{2}\rho v_{rel} C_d A$$
+    and $a_y$ in the next step.
+      
+    $$F_d = \frac{1}{2}\rho v_{rel} C_d A$$
 3.  **Calculate Acceleration :** Finding the components of acceleration
-    from the forces
-    $$a_x = -\left(\frac{F_d}{m}\right)\cdot v_{rel\,x}$$
+    from the forces  
+    $$a_x = -\left(\frac{F_d}{m}\right)\cdot v_{rel\,x}$$  
     $$a_y = -g - \left(\frac{F_d}{m}\right) \cdot v_{rel\,y}$$
 4.  **Update Velocity :** Adjust the components of velocity based on
-    those acceleration. $$v_{new} = v_{old} + a \cdot \Delta t$$
+    those acceleration.
+      
+    $$v_{new} = v_{old} + a \cdot \Delta t$$
 5.  **Update Position :** Move the projectile a tiny bit based on the
-    new velocity in both directions.
+    new velocity in both directions.  
     $$pos_{new} = pos_{old} + v_{new} \cdot \Delta t$$
 6.  **Repeat :** Continue until the object hits the ground ($y < 0$).
 
