@@ -79,9 +79,9 @@ def find_optimal_angle(v0, v_wind):
 
 def main():
     try:
-        user_v0 = float(input("Initial Velocity: "))
-        user_angle = float(input("Angle of projection: "))
-        user_v_wind = float(input("Wind (Positive for headwind/Negative for tailwind): "))
+        user_v0 = float(input("Enter Initial Velocity (m/s): "))
+        user_angle = float(input("Enter Launch Angle (degrees): "))
+        user_v_wind = float(input("Enter Wind Speed (m/s, positive for tailwind, negative for headwind): "))
     except ValueError:
         print("Invalid input. Please enter numbers.")
         return
@@ -113,3 +113,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
