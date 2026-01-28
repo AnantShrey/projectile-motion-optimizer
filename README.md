@@ -1,6 +1,6 @@
 ▶ Run interactively on Google Colab.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1uqO8zvH7T81Gpb6w5tRY26bEYpnUGjR3#scrollTo=9Uj98e9WkMzf)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1uqO8zvH7T81Gpb6w5tRY26bEYpnUGjR3)
 
 
 
