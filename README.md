@@ -141,3 +141,15 @@ include:
 
 -   **Magnus Effect :** Calculating how the \"spin/rotation\" of a ball
     (like a football or baseball) affect lift.
+
+
+
+## **6. AI Usage in the project**
+During the development of this project AeroLaunch, Google Gemini was utilized as a coding partner to:
+1. **Debugging :** Assistance in identifying and resolving logical errors and handling runtime errors related to type and division by zero in the drag calculations in the physics engine (run_simulation function).
+2. **Matplotlib :** The implementation of the matplotlib interface, specifically for creating the multi-trajectory comparison plots.
+3. **Mathematical Modeling :** Provided guidance on implementing the different physics equations for atmospheric drag and wind vectors using Euler's Method, helping to refine the run_simulation function for higher physical & logical accuracy.
+
+**Note on Verification :** While AI was used for generating multiple lines of code and debugging, every line of code was manually reviewed and tested against standard physics kinematic equations to ensure the simulation remained accurate to reality.
+
+
